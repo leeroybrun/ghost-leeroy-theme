@@ -1,0 +1,42 @@
+{{! Sidebar items go in here }}
+
+{{! A "Widget" is not an official Ghost concept.
+    It's just a class name used in linen to separate items in the sidebar }}
+
+<section class="widget">
+    {{#if @blog.logo}}
+        <!-- Logo -->
+        <div id="logo" class="h1">
+            <a id="logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Logo"></a>
+        </div>
+    {{/if}}
+
+    <!-- Title -->
+    <div id="site-title" class="h1">
+        <a href="{{@blog.url}}" rel="nofollow">{{@blog.title}}</a>
+    </div>
+    <div id="site-description" class="hide-small">
+        {{@blog.description}}
+    </div>
+</section>
+
+<section class="widget hide-small">
+    <div id="twitter-follow">
+        <a href="https://twitter.com/leeroybrun" class="twitter-follow-button" data-show-count="false">Follow @leeroybrun</a>
+    </div>
+</section>
+
+<section class="widget" id="social-icons">
+    <section>
+        <ul>
+            {{! Get unicode values from http://drinchev.github.io/monosocialiconsfont/ }}
+            <li><a href='https://twitter.com/leeroybrun' class='symbol' title='&#xe286;'></a></li>
+            <li class="hide-small"><a href='https://plus.google.com/111129246660466603322?rel=author' class='symbol' title='&#xe239;'></a></li>
+            <li class="hide-small"><a href='http://ch.linkedin.com/in/leeroybrun/' class='symbol' title='&#xe252;'></a></li>
+            <li><a href='https://github.com/leeroybrun' class='symbol' title='&#xe236;'></a></li>
+            <li class="hide-small"><a href='https://dribbble.com/leeroybrun' class='symbol' title='&#xe221;'></a></li>
+            <li><a href='mailto:leeroy.brun@gmail.com' class='symbol' title='&#xe224;'></a></li>
+            <li><a href='/rss/' class='symbol' title='&#xe271;'></a></li>
+        </ul>
+    </section>
+</section> <!-- end .widget -->

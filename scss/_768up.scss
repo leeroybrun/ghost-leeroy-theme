@@ -1,0 +1,152 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {}
+
+.hide-small {
+	display:inherit !important;
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+.header {}
+
+#logo {}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+#site-navigation {
+	background: #eee;
+	border: 0;
+
+	li {
+		float: left;
+		position: relative;
+
+		a {
+			border-bottom: 0;
+
+			/*
+			you can use hover styles here even though this size
+			has the possibility of being a mobile device.
+			*/
+			&:hover, &:focus {
+				background-color: #dedede;
+
+			}
+		}
+
+		&:first-child {}
+		&:last-child {}
+
+		/* showing sub-menus */
+		&:hover ul {
+			top: auto;
+			display: block;
+		}
+
+	} /* end .menu ul li */
+
+} /* end .nav */
+
+/*********************
+CONTENT
+*********************/
+
+.hentry {
+	max-width: 800px;
+}
+
+#main {
+	width:auto;
+    margin-left:340px;
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: 100%;
+    width: 340px;
+    padding-top:20px;
+}
+
+#logo {
+    img {
+        width: 100px;
+        border-radius:50%;
+    }
+}
+
+#site-title {
+    font-size: 1.8em;
+    margin-top:5px;
+}
+
+.widgettitle {
+    border-bottom: 2px solid #444;
+    margin-bottom: 0.75em;
+}
+
+.widget {
+    padding: 0 30px;
+    margin: 20px 0;
+
+    ul {
+        li {
+            margin-bottom: 0.75em;
+
+            &:first-child {}
+            &:last-child {}
+            a {}
+        }
+    }
+} /* end .widget */
+
+#social-icons {
+    li {
+        display:inline-block !important;
+    }
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer {
+
+} /* end .footer */
+

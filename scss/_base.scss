@@ -1,0 +1,557 @@
+/******************************************************************
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+
+* {
+-webkit-font-smoothing: antialiased;
+font-smoothing: antialiased;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+-o-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {
+	font-family: $sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
+    font-weight:400;
+	color: #444;
+}
+
+.hide-small {
+    display:none !important;
+}
+
+a.twitter-follow-button, a.twitter-follow-button:visited {
+    color:#f5f6f5;
+    height:26px;
+    display:block;
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	width: 100%;
+}
+
+/*********************
+LINK STYLES
+*********************/
+
+a, a:visited {
+	color: $link-color;
+
+	/* on hover */
+	&:hover, &:focus {
+		color: $link-hover;
+	}
+
+	/* on click */
+	&:active {
+
+	}
+
+	/* mobile tap color */
+	&:link {
+		/*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	font-family: $sans-serif;
+	text-rendering: optimizelegibility;
+	font-weight: 500;
+	/*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+
+	/* removing text decoration from all headline links */
+	a {
+		text-decoration: none;
+	}
+}
+
+h1, .h1 {
+	font-size: 1.8em;
+	line-height: 1.333em;
+}
+
+h2, .h2 {
+	font-size: 1.55em;
+	line-height: 1.4em;
+	margin-bottom: 0.375em;
+}
+
+h3, .h3 {
+	font-size: 1.3em;
+}
+
+h4, .h4 {
+	font-size: 1.12em;
+	font-weight: 700;
+}
+
+h5, .h5 {
+	font-size: 0.846em;
+	line-height: 2.09em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+.header {
+    margin-top: 24px;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+/* The {{nav}} helper outputs a site-navigation div */
+
+#site-navigation {
+	border: 1px solid #ccc;
+	border-bottom: 0;
+
+    ul {
+      margin : 0;
+    }
+
+	li {
+
+		a {
+			display: block;
+			text-decoration: none;
+			padding: 10px 10px;
+			background-color: #eee;
+			border-bottom: 1px solid #ccc;
+
+			/*
+			remember this is for mobile ONLY, so there's no need
+			to even declare hover styles here, you can do it in
+			the style.scss file where it's relevant. We want to
+			keep this file as small as possible!
+			*/
+			&:hover, &:focus {
+
+			}
+		}
+
+		&:first-child {}
+
+		&:last-child {}
+
+	} /* end .menu li */
+
+} /* end .nav */
+
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+#content {
+	
+}
+
+#main {
+    width:100%;
+    margin:0;
+}
+
+.hentry {
+    padding: 0 35px 15px;
+
+    header h1, header.h2 {
+        margin: 35px 0 0;
+    }
+
+    footer {}
+
+} /* end .hentry */
+
+.tag-slug {}        /* style by tag (i.e. tag-news) */
+
+/* post meta */
+.byline {
+    color: #999;
+    time {}
+}
+
+/* Article entry content */
+.entry-content {
+
+    p {}
+
+    ul, ol, table, dl {}
+
+    ul, ol {
+        margin: 0 0 0 35px;
+
+        li {
+            
+        }
+    }
+
+    ul {
+        li {
+            list-style: disc;
+        }
+    }
+
+    ol {
+        li {
+            list-style: decimal;
+        }
+    }
+
+    blockquote {
+        &:before {}
+    }
+
+    dl {}
+    dt {}
+    dd {
+        margin-left: 0;
+        font-size: 0.9em;
+        color: #787878;
+        margin-bottom: 1.5em;
+    }
+
+    img {
+        margin: 0 0 1.5em 0;
+        max-width: 100%;
+        height: auto;
+    }
+
+    video, object {
+        max-width: 100%;
+        height: auto;
+    }
+
+    pre {
+        background: #f5f6f5;
+        border: 0;
+        padding: 10px;
+    }
+
+} /* end .entry-content */
+
+.img-caption {
+    max-width: 100%;
+    background: #eee;
+    padding: 5px;
+
+    /* images inside img-caption */
+    img {
+        max-width: 100%;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    p.img-caption-text {
+        font-size: 0.85em;
+        margin: 4px 0 7px;
+        text-align: center;
+    }
+
+} /* end .img-caption */
+
+/* Add a comma after tags, unless it is the last one */
+.tag-label:after {
+    content: ",";
+}
+
+.tag-label:last-child:after {
+    content: "";
+}
+
+/******************************************************************
+PAGINATION (Thanks to the Ghost team for this)
+******************************************************************/
+
+/* The main wrapper for our pagination links */
+.pagination {
+  position: relative;
+  width: 80%;
+  margin: 4rem auto;
+  font-size: 1.3rem;
+  text-align: center;
+
+  a {}
+}
+
+/* Push the previous/next links out to the left/right */
+.older-posts,
+.newer-posts {
+  position: absolute;
+  display: inline-block;
+  padding: 10px 10px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #eee;
+  }
+}
+
+.older-posts {
+  right: 0;
+}
+
+.page-number {
+  display: inline-block;
+  padding: 2px 0;
+}
+
+.newer-posts {
+  left: 0;
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {
+    text-align: center;
+    background: #f5f6f5;
+    position:static;
+    width:100%;
+    height:auto;
+    padding-top:15px;
+    padding-bottom:10px;
+
+    #logo {
+        img {
+            width:80px;
+        }
+    }
+}
+
+#site-title {
+    font-size:1.7em;
+}
+
+#social-icons {
+    ul {
+        margin:0;
+    }
+
+    li {
+        display:inline-block;
+        margin-bottom:0;
+
+        a {
+            font-size:1.6em;
+        }
+
+        a.symbol:before {
+            margin-right: 0.1em;
+        }
+    }
+}
+
+#logo {
+    img {
+        border-radius:50%;
+    }
+}
+
+#site-description {
+    font-size:90%;
+    margin-top:15px;
+}
+
+.widgettitle {}
+
+.widget {
+
+    img {
+        max-width: 100%;
+    }
+
+    ul {
+
+        li {
+            &:first-child {}
+            &:last-child {}
+
+            a {
+                font-size: 1.2em;
+                text-decoration: none;
+            }
+        }
+
+    }
+
+} /* end .widget */
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer {
+	clear: both;
+}
+
+.copyright {}
+
+/*********************
+PRISM.JS
+*********************/
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+php+scss+bash+c+cpp+python+sql+csharp */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.builtin {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+    color: #a67f59;
+    background: hsla(0,0%,100%,.5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+
+.token.regex,
+.token.important {
+    color: #e90;
+}
+
+.token.important {
+    font-weight: bold;
+}
+
+.token.entity {
+    cursor: help;
+}
+
