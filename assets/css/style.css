@@ -738,7 +738,7 @@ POSTS & CONTENT STYLES
 
 .hentry {
   padding: 0 35px 15px; }
-  .hentry header h1 {
+  .hentry header h1, .hentry header.h2 {
     margin: 35px 0 0; }
 
 /* end .hentry */
