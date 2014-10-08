@@ -552,7 +552,7 @@ probably best not to use it. I mean, were you going to anyway? */
 BUTTONS
 *********************/
 .button, .button:visited {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   border: 1px solid #060606;
   border-top-color: #151515;
   border-left-color: #151515;
@@ -592,6 +592,81 @@ BUTTONS
     background-image: -o-linear-gradient(top, #1a1a1a, #272727);
     background-image: linear-gradient(to bottom, #1a1a1a, #272727); }
 
+/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript+php+scss+bash+c+python+objectivec */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+code[class*="language-"], pre[class*="language-"] {
+  color: #f8f8f2;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; }
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 0.3em; }
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+  background: #272822; }
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em;
+  border-radius: 0.3em; }
+
+.token.comment, .token.prolog, .token.doctype, .token.cdata {
+  color: slategray; }
+
+.token.punctuation {
+  color: #f8f8f2; }
+
+.namespace {
+  opacity: 0.7; }
+
+.token.property, .token.tag, .token.constant, .token.symbol, .token.deleted {
+  color: #f92672; }
+
+.token.boolean, .token.number {
+  color: #ae81ff; }
+
+.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted {
+  color: #a6e22e; }
+
+.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string, .token.variable {
+  color: #f8f8f2; }
+
+.token.atrule, .token.attr-value {
+  color: #e6db74; }
+
+.token.keyword {
+  color: #66d9ef; }
+
+.token.regex, .token.important {
+  color: #fd971f; }
+
+.token.important {
+  font-weight: bold; }
+
+.token.entity {
+  cursor: help; }
+
 /*
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If
@@ -623,11 +698,11 @@ and will be used across all viewports.
 GENERAL STYLES
 *********************/
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
-  color: #444; }
+  color: #333; }
 
 .hide-small {
   display: none !important; }
@@ -665,7 +740,7 @@ a, a:visited {
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
   font-weight: 500;
   /*
@@ -840,7 +915,7 @@ SIDEBARS & ASIDES
     width: 80px; }
 
 #site-title {
-  font-size: 1.7em; }
+  font-size: 2em; }
 
 #social-icons ul {
   margin: 0; }
@@ -1169,7 +1244,7 @@ FOOTER STYLES
     width: 100px;
     border-radius: 50%; }
   #site-title {
-    font-size: 1.8em;
+    font-size: 2em;
     margin-top: 5px; }
   .widgettitle {
     border-bottom: 2px solid #444;

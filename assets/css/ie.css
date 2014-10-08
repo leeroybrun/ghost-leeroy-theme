@@ -138,7 +138,7 @@ probably best not to use it. I mean, were you going to anyway? */
 BUTTONS
 *********************/
 .button, .button:visited {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   border: 1px solid #060606;
   border-top-color: #151515;
   border-left-color: #151515;
@@ -399,7 +399,7 @@ SIDEBARS & ASIDES
   border-radius: 50%; }
 
 #site-title {
-  font-size: 1.8em;
+  font-size: 2em;
   margin-top: 5px; }
 
 .widgettitle {
