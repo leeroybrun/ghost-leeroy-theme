@@ -921,6 +921,8 @@ SIDEBARS & ASIDES
   padding-bottom: 10px; }
   .sidebar #logo img {
     width: 80px; }
+  .sidebar .menu {
+    font-size: 0.9em; }
 
 #site-title {
   font-size: 2em; }
